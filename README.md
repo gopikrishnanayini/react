@@ -5,20 +5,21 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+gem "react_on_rails", "11.1.4" # Update to the current version
+gem "webpacker", "~> 3" # Newer versions might be supported
 
-* System dependencies
 
-* Configuration
+bundle exec rails webpacker:install
+bundle exec rails webpacker:install:react
 
-* Database creation
+rails generate react_on_rails:install
 
-* Database initialization
+gem install foreman
 
-* How to run the test suite
+foreman start -f Procfile.dev
 
-* Services (job queues, cache servers, search engines, etc.)
+start rails server then hit on browser
 
-* Deployment instructions
+ localhost:3000/hello_world
 
-* ...
+./bin/webpacker-dev-server
